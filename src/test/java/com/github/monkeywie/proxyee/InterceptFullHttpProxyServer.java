@@ -41,12 +41,12 @@ public class InterceptFullHttpProxyServer {
                   @Override
                   public boolean match(HttpRequest httpRequest, HttpResponse httpResponse, HttpProxyInterceptPipeline pipeline) {
                     //请求体中包含user字符串
-                    if(httpRequest instanceof FullHttpRequest){
-                      FullHttpRequest fullHttpRequest = (FullHttpRequest) httpRequest;
-                      String content = fullHttpRequest.content().toString(Charset.defaultCharset());
-                      return content.matches("user");
-                    }
-                    return false;
+//                    if(httpRequest instanceof FullHttpRequest){
+//                      FullHttpRequest fullHttpRequest = (FullHttpRequest) httpRequest;
+//                      String content = fullHttpRequest.content().toString(Charset.defaultCharset());
+//                      return content.matches("百度");
+//                    }
+                    return true;
                   }
 
                   @Override
